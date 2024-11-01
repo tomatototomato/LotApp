@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>くじ引きシュミレーション</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1>くじ引き シュミレーション</h1>
+        </div>
+    </header>
+
+
+    <div class="parameter">
+
+        <div>
+            <div class="container">
+                <div id="container_contentsTitle">
+                    <h2>設定項目</h2>
+                </div>
+
+                <div id="container_valuesTitle">
+                    <h2>倍率の値</h2>
+                </div>
+            </div>
+            <hr width="500" align="left">
+
+            <div class="container">
+                <div id="container_title">
+                    <p>「1」の出現確率</p>
+                </div>
+
+                <div id="container_value">
+                    <input type="text" value=25 size="5px" id="textbox1">
+                </div>
+
+                <div>
+                    <p>%</p>
+                </div>
+
+            </div>
+            <hr width="500" align="left">
+
+            <div class="container">
+                <div id="container_title">
+                    <p>「2」の出現確率</p>
+                </div>
+
+                <div id="container_value">
+                    <input type="text" value=20 size="5px" id="textbox2">
+                </div>
+
+                <div>
+                    <p>%</p>
+                </div>
+            </div>
+            <hr width="500" align="left">
+
+            <div class="container">
+                <div id="container_title">
+                    <p>「3」の出現確率</p>
+                </div>
+
+                <div id="container_value">
+                    <input type="text" value=17 size="5px" id="textbox3">
+                </div>
+
+                <div>
+                    <p>%</p>
+                </div>
+            </div>
+            <hr width="500" align="left">
+
+            <div class="container">
+                <div id="container_title">
+                    <p>「4」の出現確率</p>
+                </div>
+
+                <div id="container_value">
+                    <input type="text" value=14 size="5px" id="textbox4">
+                </div>
+
+                <div>
+                    <p>%</p>
+                </div>
+            </div>
+            <hr width="500" align="left">
+
+            <div class="container">
+                <div id="container_title">
+                    <p>「5」の出現確率</p>
+                </div>
+
+                <div id="container_value">
+                    <input type="text" value=11 size="5px" id="textbox5">
+                </div>
+
+                <div>
+                    <p>%</p>
+                </div>
+            </div>
+            <hr width="500" align="left">
+
+            <div class="container">
+                <div id="container_title">
+                    <p>「6」の出現確率</p>
+                </div>
+
+                <div id="container_value">
+                    <input type="text" value=8 size="5px" id="textbox6">
+                </div>
+
+                <div>
+                    <p>%</p>
+                </div>
+            </div>
+            <hr width="500" align="left">
+
+            <div class="container">
+                <div id="container_title">
+                    <p>「7」の出現確率</p>
+                </div>
+
+                <div id="container_value">
+                    <input type="text" value=5 size="5px" id="textbox7">
+                </div>
+
+                <div>
+                    <p>%</p>
+                </div>
+            </div>
+            <hr width="500" align="left">
+
+        </div>
+
+    </div>
+
+    <div class="scratch">
+        <img src="./img/スクラッチくじ　簡易UI.png" alt="" id="scratch_img">
+
+        <div class="table">
+            <div class="row"> 
+
+                <div class="column">
+                    <p id="num1">*</p>
+                    <p id="num2">*</p>
+                    <p id="num3">*</p>
+                </div>
+
+                <div class="column">
+                    <p id="num4">*</p>
+                    <p id="num5">*</p>
+                    <p id="num6">*</p>
+                </div>
+
+                <div class="column">
+                    <p id="num7">*</p>
+                    <p id="num8">*</p>
+                    <p id="num9">*</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="function">
+        <button type="button" id="button">くじを引く</button>
+
+        <h2 id="result_title">結果 →</h2>
+        <h2 id="result_value">***********
+
+        </h2>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/function.js"></script>
+
+</body>
+
+</html>
