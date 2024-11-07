@@ -35,10 +35,6 @@ header h1 {
     margin-left: 50px;
 }
 
-#container_title {
-
-}
-
 #container_value {
     margin-top: 15px;
     margin-left: 40px;
@@ -82,6 +78,36 @@ header h1 {
     padding-top: 0px;
     padding-left: 20px;
     padding-right: 30px;
+}
+
+/* --銀テープ部分-- */
+.silver-table {
+    display: flex;
+
+    position: absolute;
+    left: 108px;
+    top: 855px;
+}
+
+.silver-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.silver-column {
+    display: flex;
+
+    padding-top: 0px;
+    padding-left: 5px;
+    padding-right: 30px;
+}
+
+.silver-column canvas {
+    display: flex;
+
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /* --ボタン部分-- */

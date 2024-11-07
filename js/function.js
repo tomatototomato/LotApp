@@ -1,4 +1,8 @@
 
+//グローバル変数の定義
+
+
+
 //確率の設定値を足し合わせる関数---------
 function sum(arrays) { 
   let a = 0;
@@ -38,6 +42,13 @@ function lot(tx1,tx2,tx3,tx4,tx5,tx6,tx7) {
   }
   return result
 }
+
+function array_every() { 
+  if (tape_array.every(num => num === 0)) {
+    return true;
+  }
+}
+
 
 //あたり判定-------------------------------------------------
 function judge(lot_array) {
@@ -87,9 +98,110 @@ function judge(lot_array) {
 
 }
 
-
 //ボタン押下------------------------------------------------
 $("#button").on("click", function () {
+
+  //抽選結果の初期化
+  $("#result_value").html("削って！！");
+
+  //配列の初期化
+  var canvas001 = document.getElementById("canvas001");
+  var canvas002 = document.getElementById("canvas002");
+  var canvas003 = document.getElementById("canvas003");
+  var canvas004 = document.getElementById("canvas004");
+  var canvas005 = document.getElementById("canvas005");
+  var canvas006 = document.getElementById("canvas006");
+  var canvas007 = document.getElementById("canvas007");
+  var canvas008 = document.getElementById("canvas008");
+  var canvas009 = document.getElementById("canvas009");
+
+  //フラグON
+  //銀テープのON/OFFのフラグ変数
+  tape_array = new Array(1, 1, 1, 1, 1, 1, 1, 1, 1); //グローバル変数
+  console.log(tape_array);
+
+  if (canvas001.getContext) {
+    var context001 = canvas001.getContext("2d");//2次元描画
+    //四角形
+    context001.fillStyle = '#808080';
+    context001.fillRect(0, 0, 180, 180);//塗りつぶされた四角形
+    // context001.clearRect(30, 30, 120, 120);//四角形の範囲を削除
+    // context001.strokeRect(40, 40, 100, 100);//輪郭線の四角形
+  }
+
+  if (canvas002.getContext) {
+    var context002 = canvas002.getContext("2d");//2次元描画
+    //四角形
+    context002.fillStyle = '#808080';
+    context002.fillRect(0, 0, 180, 180);//塗りつぶされた四角形
+    // context001.clearRect(30, 30, 120, 120);//四角形の範囲を削除
+    // context001.strokeRect(40, 40, 100, 100);//輪郭線の四角形
+  }
+
+  if (canvas003.getContext) {
+    var context003 = canvas003.getContext("2d");//2次元描画
+    //四角形
+    context003.fillStyle = '#808080';
+    context003.fillRect(0, 0, 180, 180);//塗りつぶされた四角形
+    // context001.clearRect(30, 30, 120, 120);//四角形の範囲を削除
+    // context001.strokeRect(40, 40, 100, 100);//輪郭線の四角形
+  }
+
+  if (canvas004.getContext) {
+    var context004 = canvas004.getContext("2d");//2次元描画
+    //四角形
+    context004.fillStyle = '#808080';
+    context004.fillRect(0, 0, 180, 180);//塗りつぶされた四角形
+    // context001.clearRect(30, 30, 120, 120);//四角形の範囲を削除
+    // context001.strokeRect(40, 40, 100, 100);//輪郭線の四角形
+  }
+
+  if (canvas005.getContext) {
+    var context005 = canvas005.getContext("2d");//2次元描画
+    //四角形
+    context005.fillStyle = '#808080';
+    context005.fillRect(0, 0, 180, 180);//塗りつぶされた四角形
+    // context001.clearRect(30, 30, 120, 120);//四角形の範囲を削除
+    // context001.strokeRect(40, 40, 100, 100);//輪郭線の四角形
+  }
+
+  if (canvas006.getContext) {
+    var context006 = canvas006.getContext("2d");//2次元描画
+    //四角形
+    context006.fillStyle = '#808080';
+    context006.fillRect(0, 0, 180, 180);//塗りつぶされた四角形
+    // context001.clearRect(30, 30, 120, 120);//四角形の範囲を削除
+    // context001.strokeRect(40, 40, 100, 100);//輪郭線の四角形
+  }
+
+  if (canvas007.getContext) {
+    var context007 = canvas007.getContext("2d");//2次元描画
+    //四角形
+    context007.fillStyle = '#808080';
+    context007.fillRect(0, 0, 180, 180);//塗りつぶされた四角形
+    // context001.clearRect(30, 30, 120, 120);//四角形の範囲を削除
+    // context001.strokeRect(40, 40, 100, 100);//輪郭線の四角形
+  }
+
+  if (canvas008.getContext) {
+    var context008 = canvas008.getContext("2d");//2次元描画
+    //四角形
+    context008.fillStyle = '#808080';
+    context008.fillRect(0, 0, 180, 180);//塗りつぶされた四角形
+    // context001.clearRect(30, 30, 120, 120);//四角形の範囲を削除
+    // context001.strokeRect(40, 40, 100, 100);//輪郭線の四角形
+  }
+
+  if (canvas009.getContext) {
+    var context009 = canvas009.getContext("2d");//2次元描画
+    //四角形
+    context009.fillStyle = '#808080';
+    context009.fillRect(0, 0, 180, 180);//塗りつぶされた四角形
+    // context001.clearRect(30, 30, 120, 120);//四角形の範囲を削除
+    // context001.strokeRect(40, 40, 100, 100);//輪郭線の四角形
+  }
+
+  
 
   var tx_arr = new Array(
     Number(document.getElementById('textbox1').value),
@@ -104,7 +216,7 @@ $("#button").on("click", function () {
   if (sum(tx_arr) === 100) {
     
     //配列の初期化
-    var lot_array = new Array();
+    lot_array = new Array(); //グローバル関数
 
     //乱数から1〜7までの数字を生成して配列にセット
     for (let i = 1; i < 10; i++) {
@@ -124,11 +236,120 @@ $("#button").on("click", function () {
     $("#num8").html(lot_array[7]);
     $("#num9").html(lot_array[8]);
 
-    //
-    $("#result_value").html(judge(lot_array));
+    //抽選結果を表示
+    // $("#result_value").html(judge(lot_array));
 
   } else { 
     alert("確率は足し合わせて100 % になるように設定してください");
   }
 
+});
+
+//隠しテープを押下------------------------------------------------
+$("#canvas001").on("click", function () {
+  var canvas001 = document.getElementById("canvas001");
+  var context001 = canvas001.getContext("2d");//2次元描画
+  context001.clearRect(0, 0, 180, 180);
+
+  tape_array[0] = 0;
+  console.log(tape_array);
+  if (array_every()) { 
+    $("#result_value").html(judge(lot_array));
+  }
+});
+
+$("#canvas002").on("click", function () {
+  var canvas002 = document.getElementById("canvas002");
+  var context002 = canvas002.getContext("2d");//2次元描画
+  context002.clearRect(0, 0, 180, 180);
+
+  tape_array[1] = 0;
+  console.log(tape_array);
+  if (array_every()) {
+    $("#result_value").html(judge(lot_array));
+  }
+});
+
+$("#canvas003").on("click", function () {
+  var canvas003 = document.getElementById("canvas003");
+  var context003 = canvas003.getContext("2d");//2次元描画
+  context003.clearRect(0, 0, 180, 180);
+
+  tape_array[2] = 0;
+  console.log(tape_array);
+  if (array_every()) {
+    $("#result_value").html(judge(lot_array));
+  }
+});
+
+$("#canvas004").on("click", function () {
+  var canvas004 = document.getElementById("canvas004");
+  var context004 = canvas004.getContext("2d");//2次元描画
+  context004.clearRect(0, 0, 180, 180);
+
+  tape_array[3] = 0;
+  console.log(tape_array);
+  if (array_every()) {
+    $("#result_value").html(judge(lot_array));
+  }
+});
+
+$("#canvas005").on("click", function () {
+  var canvas005 = document.getElementById("canvas005");
+  var context005 = canvas005.getContext("2d");//2次元描画
+  context005.clearRect(0, 0, 180, 180);
+
+  tape_array[4] = 0;
+  console.log(tape_array);
+  if (array_every()) {
+    $("#result_value").html(judge(lot_array));
+  }
+});
+
+$("#canvas006").on("click", function () {
+  var canvas006 = document.getElementById("canvas006");
+  var context006 = canvas006.getContext("2d");//2次元描画
+  context006.clearRect(0, 0, 180, 180);
+
+  tape_array[5] = 0;
+  console.log(tape_array);
+  if (array_every()) {
+    $("#result_value").html(judge(lot_array));
+  }
+});
+
+$("#canvas007").on("click", function () {
+  var canvas007 = document.getElementById("canvas007");
+  var context007 = canvas007.getContext("2d");//2次元描画
+  context007.clearRect(0, 0, 180, 180);
+
+  tape_array[6] = 0;
+  console.log(tape_array);
+  if (array_every()) {
+    $("#result_value").html(judge(lot_array));
+  }
+});
+
+$("#canvas008").on("click", function () {
+  var canvas008 = document.getElementById("canvas008");
+  var context008 = canvas008.getContext("2d");//2次元描画
+  context008.clearRect(0, 0, 180, 180);
+
+  tape_array[7] = 0;
+  console.log(tape_array);
+  if (array_every()) {
+    $("#result_value").html(judge(lot_array));
+  }
+});
+
+$("#canvas009").on("click", function () {
+  var canvas009 = document.getElementById("canvas009");
+  var context009 = canvas009.getContext("2d");//2次元描画
+  context009.clearRect(0, 0, 180, 180);
+
+  tape_array[8] = 0;
+  console.log(tape_array);
+  if (array_every()) {
+    $("#result_value").html(judge(lot_array));
+  }
 });
